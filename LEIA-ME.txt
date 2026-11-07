@@ -1,0 +1,19 @@
+BANCÔ v1.0 — Gestão de Banca (PWA)
+
+Arquivos (envie TODOS soltos na raiz do repositório, sem pasta):
+  index.html, manifest.json, sw.js, icon-192.png, icon-512.png, icon-maskable-512.png
+
+Publicar (mesmo caminho do Fatiô):
+ 1. GitHub > New repository > nome: banco > Public > Create
+ 2. "uploading an existing file" > arraste os 6 arquivos > Commit changes
+ 3. Settings > Pages > Deploy from a branch > main / (root) > Save
+ 4. Link: https://alexcsr93.github.io/banco/
+ 5. Celular (Chrome) > ⋮ > Instalar app
+
+APK (PWABuilder > Package For Stores > Android):
+ - Package ID: io.github.alexcsr93.banco   (NUNCA o mesmo do Fatiô)
+ - Signing key: New  |  Fallback: Custom Tabs
+ - Adicione o bloco novo no assetlinks.json do repo alexcsr93.github.io (sem apagar os outros)
+
+Atualizar depois: troque 'banco-v1' por 'banco-v2' no sw.js e suba os arquivos de novo.
+Dados ficam só no aparelho: use Ajustes > Backup de vez em quando.
