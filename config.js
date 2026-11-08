@@ -1,12 +1,9 @@
 // ============ Bancô · configuração do Firebase ============
-// Cole aqui o bloco "firebaseConfig" do seu projeto Firebase
-// (Configurações do projeto > Seus apps > App da Web > opção "Config").
-// Enquanto estiver com COLE_AQUI, o app funciona normalmente, só sem login.
 window.FIREBASE_CONFIG = {
-  apiKey: "COLE_AQUI",
-  authDomain: "COLE_AQUI.firebaseapp.com",
-  projectId: "COLE_AQUI",
-  storageBucket: "COLE_AQUI.appspot.com",
-  messagingSenderId: "COLE_AQUI",
-  appId: "COLE_AQUI"
+  apiKey: "AIzaSyBkmlNo3vb9HuqHfAwHh5lAnmNasXd8Gso",
+  authDomain: "banco-app-8596b.firebaseapp.com",
+  projectId: "banco-app-8596b",
+  storageBucket: "banco-app-8596b.firebasestorage.app",
+  messagingSenderId: "1018415129621",
+  appId: "1:1018415129621:web:2f60000d26a1753a915a1c"
 };
