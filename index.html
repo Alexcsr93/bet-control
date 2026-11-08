@@ -22,6 +22,7 @@ header{position:sticky;top:0;z-index:20;background:var(--bg);padding:calc(env(sa
 .hrow{display:flex;align-items:center;justify-content:space-between;gap:8px}
 .hello{font-size:20px;font-weight:700}
 .ctx{color:var(--mut);font-size:13px;margin-top:2px}
+.cst{font-size:11px;color:var(--mut);margin-top:3px}
 .logo{display:flex;align-items:center;gap:8px;font-weight:800;font-size:18px}
 .logo i{width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,#16a34a,#22c55e);display:grid;place-items:center}
 .mnav{display:flex;align-items:center;gap:6px;background:var(--card);border:1px solid var(--ln);border-radius:12px;padding:4px}
@@ -40,7 +41,6 @@ main{padding:6px 16px calc(env(safe-area-inset-bottom) + 100px);max-width:720px;
 .hero .chip{background:rgba(255,255,255,.14);border-radius:10px;padding:6px 10px;font-size:12px}
 .hero .chip b{display:block;font-size:14px}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .stat{background:var(--card2);border-radius:14px;padding:10px}
 .stat .k{color:var(--mut);font-size:11px;text-transform:uppercase;letter-spacing:.4px}
 .stat .v{font-size:17px;font-weight:700;margin-top:2px}
@@ -61,13 +61,14 @@ main{padding:6px 16px calc(env(safe-area-inset-bottom) + 100px);max-width:720px;
 .br .val{font-weight:700}
 .qb{display:flex;gap:6px;margin-top:4px;justify-content:flex-end}
 .qb button{border:0;border-radius:9px;padding:6px 10px;font-weight:700;font-size:12px;cursor:pointer}
-.bg{background:var(--g);color:#04210f}.brd{background:var(--r);color:#fff}.bo{background:var(--card2)}
+.bg{background:var(--g);color:#04210f}.brd{background:var(--r);color:#fff}
 .dh{color:var(--mut);font-size:12px;font-weight:600;margin:14px 0 2px;text-transform:uppercase;letter-spacing:.4px}
 .chipsF{display:flex;gap:6px;overflow-x:auto;padding:4px 0}
 .chipsF button{border:1px solid var(--ln);background:var(--card);border-radius:99px;padding:7px 13px;font-size:13px;white-space:nowrap;cursor:pointer}
 .chipsF button.on{background:var(--g);border-color:var(--g);color:#04210f;font-weight:700}
 .btn{border:0;border-radius:14px;padding:13px 14px;font-weight:700;cursor:pointer;width:100%;font-size:15px}
 .btn.g{background:var(--g);color:#04210f}.btn.r{background:var(--r);color:#fff}.btn.o{background:var(--card2);color:var(--tx)}.btn.y{background:var(--y);color:#291800}
+.btn.gg{background:#fff;color:#1f1f1f;display:flex;align-items:center;justify-content:center;gap:10px;border:1px solid #dadce0}
 .btns{display:flex;gap:8px;margin-top:12px}
 .lnk{background:none;border:0;color:var(--g);font-weight:700;cursor:pointer;padding:0 4px}
 nav{position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--card);border-top:1px solid var(--ln);display:flex;justify-content:space-around;padding:6px 4px calc(env(safe-area-inset-bottom) + 6px)}
@@ -105,13 +106,21 @@ input:focus,select:focus,textarea:focus{border-color:var(--g)}
 .hb .v{width:96px;text-align:right;font-weight:700;flex:none}
 .empty{color:var(--mut);text-align:center;padding:18px 6px;font-size:13px}
 svg text{fill:var(--mut);font-size:10px}
-.toast{position:fixed;left:50%;top:calc(env(safe-area-inset-top) + 14px);transform:translateX(-50%);z-index:80;background:var(--card);border:1px solid var(--ln);box-shadow:var(--sh);border-radius:14px;padding:11px 16px;font-weight:700;animation:up .2s}
-.lock{position:fixed;inset:0;z-index:90;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px}
+.toast{position:fixed;left:50%;top:calc(env(safe-area-inset-top) + 14px);transform:translateX(-50%);z-index:95;background:var(--card);border:1px solid var(--ln);box-shadow:var(--sh);border-radius:14px;padding:11px 16px;font-weight:700;animation:up .2s;max-width:92vw;text-align:center}
+.lock,.boas{position:fixed;inset:0;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:24px}
+.lock{z-index:90}.boas{z-index:85;text-align:center}
+.boas .bigicon{width:88px;height:88px;border-radius:24px;background:linear-gradient(140deg,#0b0f14,#14532d);display:grid;place-items:center;box-shadow:0 10px 30px rgba(34,197,94,.25)}
+.boas h1{margin:0;font-size:30px}
+.boas p{margin:0;color:var(--mut);max-width:320px}
+.boas .acts{width:100%;max-width:340px;display:flex;flex-direction:column;gap:10px;margin-top:8px}
 .pdots{display:flex;gap:12px}.pdots i{width:14px;height:14px;border-radius:50%;border:2px solid var(--mut)}.pdots i.f{background:var(--g);border-color:var(--g)}
 .kp{display:grid;grid-template-columns:repeat(3,72px);gap:12px}
 .kp button{height:64px;border-radius:20px;border:0;background:var(--card);font-size:22px;font-weight:700;cursor:pointer}
-.leg{display:flex;flex-wrap:wrap;gap:10px;font-size:12px;margin-top:6px}.leg span{display:flex;align-items:center;gap:5px}.leg i{width:10px;height:10px;border-radius:3px;display:inline-block}
 .tbl{width:100%;border-collapse:collapse;font-size:13px}.tbl td,.tbl th{padding:8px 4px;border-bottom:1px solid var(--ln);text-align:right}.tbl td:first-child,.tbl th:first-child{text-align:left}.tbl th{color:var(--mut);font-weight:600;font-size:11px;text-transform:uppercase}
+.av{width:44px;height:44px;border-radius:50%;background:var(--g);color:#04210f;display:grid;place-items:center;font-weight:800;font-size:18px;flex:none;overflow:hidden}
+.av img{width:100%;height:100%;object-fit:cover}
+.opt{border:1px solid var(--ln);background:var(--card2);border-radius:14px;padding:12px;margin-top:10px;cursor:pointer;text-align:left;width:100%}
+.opt b{display:block;margin-bottom:2px}
 .foot{color:var(--mut);font-size:11px;text-align:center;margin:18px 0 6px}
 </style>
 </head>
@@ -122,14 +131,26 @@ svg text{fill:var(--mut);font-size:10px}
   <div class="pdots" id="pdots"><i></i><i></i><i></i><i></i></div>
   <div class="kp" id="kp"></div>
 </div>
+<div id="boas" class="boas hidden">
+  <div class="bigicon"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></div>
+  <h1>Bancô</h1>
+  <p>Gestão de banca com greens, reds, depósitos, saques e gráficos. Entre com o Google para ter backup na nuvem e usar no celular e no computador.</p>
+  <div class="acts">
+    <button class="btn gg" onclick="entrarGoogle()"><svg width="20" height="20" viewBox="0 0 48 48"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg>Entrar com Google</button>
+    <button class="btn o" onclick="semConta()">Continuar sem conta</button>
+  </div>
+  <p style="font-size:12px">Sem conta, os dados ficam só neste aparelho. Dá para entrar depois em Ajustes.</p>
+</div>
 <header id="hdr"></header>
 <main id="view"></main>
 <button class="fab" id="fab" onclick="fabAction()" aria-label="Nova aposta">+</button>
 <nav id="nav"></nav>
 <div id="ovl"></div>
 
+<script src="config.js"></script>
+<script src="cloud.js"></script>
 <script>
-/* ============ Bancô v1.0 — Gestão de banca ============ */
+/* ============ Bancô v1.1 — Gestão de banca + login Google ============ */
 const KEY='banco_v1';
 const $=s=>document.querySelector(s);
 const uid=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,7);
@@ -145,6 +166,7 @@ const MESES=['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','
 const MESESF=['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro'];
 const mesLabel=m=>{const[y,mm]=m.split('-');return MESES[+mm-1]+' '+y};
 const dLabel=d=>{if(d===hoje())return'Hoje';const t=new Date();t.setDate(t.getDate()-1);const o=t.getFullYear()+'-'+String(t.getMonth()+1).padStart(2,'0')+'-'+String(t.getDate()).padStart(2,'0');if(d===o)return'Ontem';const[y,m,dd]=d.split('-');return dd+' de '+MESESF[+m-1]};
+const dataHora=ts=>{const d=new Date(ts);return d.toLocaleDateString('pt-BR')+' às '+d.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'})};
 const CORES=['#22c55e','#3b82f6','#f59e0b','#a855f7','#ef4444','#14b8a6','#ec4899','#eab308','#64748b'];
 
 function def(){return{v:1,nome:'',tema:'dark',unidadePct:2,meta:0,stopLoss:0,limDep:0,pin:'',
@@ -154,8 +176,41 @@ function def(){return{v:1,nome:'',tema:'dark',unidadePct:2,meta:0,stopLoss:0,lim
   movs:[],bets:[],tab:'inicio',mes:hoje().slice(0,7)}}
 function load(){try{const s=JSON.parse(localStorage.getItem(KEY));return s?Object.assign(def(),s):def()}catch(e){return def()}}
 let S=load();
-function save(){localStorage.setItem(KEY,JSON.stringify(S))}
-let filtro='todas',gPer='mes',unlocked=!S.pin;
+/* save(): mudou dado → grava e envia para a nuvem. saveUI(): só preferência do aparelho */
+function save(){S._ts=Date.now();localStorage.setItem(KEY,JSON.stringify(S));Cloud.push()}
+function saveUI(){localStorage.setItem(KEY,JSON.stringify(S))}
+let filtro='todas',gPer='mes';
+
+/* ============ Ponte com a nuvem ============ */
+const SO_APARELHO=['tab','mes','tema','pin','semConta','_ts','_sync','_uid'];
+function dadosSync(){const o={};for(const k in S)if(!SO_APARELHO.includes(k))o[k]=S[k];return o}
+const temDados=()=>S.bets.length>0||S.movs.length>0;
+let USER=null,CST='';
+const CST_TXT={local:'📱 Só neste aparelho',conectando:'⏳ Conectando…',salvando:'⏳ Salvando…',ok:'☁️ Sincronizado',offline:'📴 Offline · sincroniza quando voltar',erro:'⚠️ Erro na sincronização'};
+Cloud.init({
+  dados:dadosSync,
+  estado:()=>({ts:S._ts||0,sync:S._sync||0,uid:S._uid||null,tem:temDados(),n:S.bets.length}),
+  aplicar(dados,ts,u){const keep={};SO_APARELHO.forEach(k=>{if(k in S)keep[k]=S[k]});S=Object.assign(def(),dados,keep,{_ts:ts,_sync:ts,_uid:u});saveUI();render();toast('☁️ Dados da nuvem carregados')},
+  marcaSync(ts,u){if(!S._ts)S._ts=ts;S._sync=ts;S._uid=u;saveUI()},
+  status(st){CST=st;document.querySelectorAll('.cst').forEach(e=>e.textContent=CST_TXT[st]||'')},
+  onUser(u){USER=u;
+    if(u){$('#boas').classList.add('hidden');if(!S.nome&&u.displayName){S.nome=u.displayName.split(' ')[0];saveUI()}}
+    else if(!S.semConta)$('#boas').classList.remove('hidden');
+    render()},
+  conflito:escolherDados,
+  erro:m=>{toast(m);console.warn(m)}
+});
+function entrarGoogle(){if(!Cloud.pronto()){toast(Cloud.configurado()?'Sem conexão com o Google agora. Tente de novo.':'Login ainda não configurado (veja o LEIA-ME).');return}Cloud.entrar()}
+function semConta(){S.semConta=true;saveUI();$('#boas').classList.add('hidden')}
+function sair(){if(!confirm('Sair da conta?\n\nSeus dados continuam salvos na nuvem e serão removidos só deste aparelho.'))return;
+  Cloud.sair().then(()=>{const k={tema:S.tema};S=Object.assign(def(),k);saveUI();render();$('#boas').classList.remove('hidden')})}
+function escolherDados(remoto,usarNuvem,usarAparelho){
+  const qt=(b,m)=>`${b} aposta${b===1?'':'s'} · ${m} movimentaç${m===1?'ão':'ões'}`;const nN=qt((remoto.dados.bets||[]).length,(remoto.dados.movs||[]).length),nL=qt(S.bets.length,S.movs.length);
+  sheet(`<h3>Qual versão dos dados usar?</h3><div class="hint" style="margin:0">Sua conta já tem dados salvos e este aparelho também. Escolha qual vale. A outra será substituída.</div>
+  <button class="opt" id="o_n"><b>☁️ Dados da nuvem</b><span class="mut">${nN} · salvo em ${dataHora(remoto.ts)}</span></button>
+  <button class="opt" id="o_l"><b>📱 Dados deste aparelho</b><span class="mut">${nL} apostas${S._ts?' · alterado em '+dataHora(S._ts):''}</span></button>
+  <div class="hint">Na dúvida, escolha a que tem mais apostas. Se quiser garantir, faça um backup antes em Ajustes.</div>`,true);
+  $('#o_n').onclick=()=>{fecha();usarNuvem()};$('#o_l').onclick=()=>{fecha();usarAparelho()}}
 
 /* ============ Cálculos ============ */
 const STATUS={pendente:{t:'Pendente',c:'p',s:'⏳'},green:{t:'Green',c:'g',s:'G'},red:{t:'Red',c:'r',s:'R'},meiog:{t:'½ Green',c:'g',s:'½G'},meior:{t:'½ Red',c:'r',s:'½R'},void:{t:'Anulada',c:'v',s:'↺'},cashout:{t:'Cashout',c:'v',s:'$'}};
@@ -226,8 +281,8 @@ const IC={
  graficos:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10"/><path d="M10 20V4"/><path d="M16 20v-7"/><path d="M22 20H2"/></svg>',
  mais:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>'};
 const TABS=[['inicio','Início'],['apostas','Apostas'],['banca','Banca'],['graficos','Gráficos'],['mais','Ajustes']];
-function go(t){S.tab=t;save();render();window.scrollTo(0,0)}
-function mudaMes(n){let[y,m]=S.mes.split('-').map(Number);m+=n;if(m<1){m=12;y--}if(m>12){m=1;y++}S.mes=y+'-'+String(m).padStart(2,'0');save();render()}
+function go(t){S.tab=t;saveUI();render();window.scrollTo(0,0)}
+function mudaMes(n){let[y,m]=S.mes.split('-').map(Number);m+=n;if(m<1){m=12;y--}if(m>12){m=1;y++}S.mes=y+'-'+String(m).padStart(2,'0');saveUI();render()}
 const mnav=()=>`<div class="mnav"><button onclick="mudaMes(-1)">‹</button><span>${mesLabel(S.mes)}</span><button onclick="mudaMes(1)">›</button></div>`;
 
 function header(){
@@ -239,7 +294,7 @@ function header(){
     else if(st.lucro>0)ctx='Mês no verde. Mantenha a gestão. 💚';
     else if(st.lucro<0)ctx='Mês no vermelho. Respeite sua unidade.';
     else ctx='Nenhum resultado no mês ainda.';
-    return`<div class="hrow"><div><div class="hello">${sd}${S.nome?', '+esc(S.nome):''} 👋</div><div class="ctx">${ctx}</div></div>${mnav()}</div>`}
+    return`<div class="hrow"><div><div class="hello">${sd}${S.nome?', '+esc(S.nome):''} 👋</div><div class="ctx">${ctx}</div>${Cloud.configurado()?`<div class="cst">${CST_TXT[CST]||''}</div>`:''}</div>${mnav()}</div>`}
   const tt={apostas:'Apostas',banca:'Banca',graficos:'Gráficos',mais:'Ajustes'}[t];
   return`<div class="hrow"><div class="logo"><i><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></i>${tt}</div>${(t==='apostas'||t==='graficos')?mnav():''}</div>`}
 
@@ -294,7 +349,7 @@ function vInicio(){
    <div class="stat"><div class="k">Sacado</div><div class="v">${fmt(st.saq)}</div></div>
    <div class="stat"><div class="k">No bolso</div><div class="v ${cls(liq)}">${fmtS(liq)}</div></div></div>
    ${S.limDep>0?`<div style="margin-top:12px"><div class="hint" style="margin:0 0 6px">Limite de depósito: ${fmt(st.dep)} de ${fmt(S.limDep)}</div><div class="bar"><i style="width:${Math.min(100,st.dep/S.limDep*100)}%;background:${st.dep>=S.limDep?'var(--r)':'var(--y)'}"></i></div></div>`:''}</div>`;
-  h+=`<div class="foot">Unidade atual: ${fmt(unidade())} (${S.unidadePct}% da banca) · Bancô v1.0</div>`;
+  h+=`<div class="foot">Unidade atual: ${fmt(unidade())} (${S.unidadePct}% da banca) · Bancô v1.1</div>`;
   return h}
 
 /* ============ APOSTAS ============ */
@@ -323,7 +378,7 @@ function vBanca(){
   h+=`<div class="card"><h3>Casas <button class="lnk" onclick="casaForm()">＋ nova</button></h3>${S.casas.map(c=>{const sl=saldoCasa(c.id),ej=emJogo(c.id),lc=S.bets.filter(b=>b.casaId===c.id&&resolvida(b)).reduce((a,b)=>a+lucro(b),0);
    return`<div class="casa" onclick="casaForm('${c.id}')"><div class="ic" style="background:${c.cor}">${esc(c.nome.trim().charAt(0).toUpperCase()||'?')}</div><div class="bl"><div class="ev">${esc(c.nome)}</div><div class="meta">Em jogo ${fmt(ej)} · Lucro <span class="${cls(lc)}">${fmtS(lc)}</span></div></div><div class="br"><div class="val ${sl<0?'neg':''}">${fmt(sl)}</div></div></div>`}).join('')}</div>`;
   const mv=S.movs.slice().sort(ord).reverse().slice(0,60);
-  const TP={deposito:['⬇','Depósito','g'],saque:['⬆','Saque','r'],bonus:['🎁','Bônus','g']};
+  const TP={deposito:['⬇','Depósito'],saque:['⬆','Saque'],bonus:['🎁','Bônus']};
   h+=`<div class="card"><h3>Movimentações <small>últimas ${mv.length}</small></h3>${mv.length?mv.map(m=>{const t=TP[m.tipo];return`<div class="bet" onclick="movForm(null,'${m.id}')"><div class="dot ${m.tipo==='saque'?'v':'g'}">${t[0]}</div><div class="bl"><div class="ev">${t[1]}${m.obs?' · '+esc(m.obs):''}</div><div class="meta">${dLabel(m.data)} · ${esc(casaById(m.casaId).nome)}</div></div><div class="br"><div class="val ${m.tipo==='saque'?'':'pos'}">${m.tipo==='saque'?'-':'+'}${fmt(m.valor)}</div></div></div>`}).join(''):'<div class="empty">Registre seu primeiro depósito para montar a banca.</div>'}</div>`;
   return h}
 
@@ -331,35 +386,37 @@ function vBanca(){
 function vGraficos(){
   const mes=gPer==='mes'?S.mes:null,st=stats(mes);
   let h=`<div class="chipsF"><button class="${gPer==='mes'?'on':''}" onclick="gPer='mes';render()">${mesLabel(S.mes)}</button><button class="${gPer==='tudo'?'on':''}" onclick="gPer='tudo';render()">Todo o período</button></div>`;
-  // evolução da banca
   const ev={};S.movs.forEach(m=>{ev[m.data]=(ev[m.data]||0)+(m.tipo==='saque'?-m.valor:+m.valor)});S.bets.forEach(b=>{if(resolvida(b))ev[b.data]=(ev[b.data]||0)+lucro(b)});
   const dias=Object.keys(ev).sort();let acc=0,prev=null;const bv=[],bl=[];
   dias.forEach(d=>{acc+=ev[d];if(!mes||d.startsWith(mes)){if(!bv.length&&prev!==null){bv.push(prev);bl.push('')}bv.push(acc);bl.push(dLabel(d))}else if(d<(mes||''))prev=acc});
   h+=`<div class="card"><h3>Evolução da banca <small>depósitos, saques e resultados</small></h3>${lineChart(bv,bl,160,true)}</div>`;
-  // lucro por dia
   const pd={};st.res.forEach(b=>pd[b.data]=(pd[b.data]||0)+lucro(b));
   const pdi=Object.keys(pd).sort().map(d=>({l:dLabel(d),v:pd[d]}));
   h+=`<div class="card"><h3>Lucro por dia <small>${pdi.filter(x=>x.v>0).length} dias verdes · ${pdi.filter(x=>x.v<0).length} vermelhos</small></h3>${barChart(pdi.slice(-31),150)}</div>`;
-  // green x red
   const vo=st.res.filter(b=>b.status==='void').length,co=st.res.filter(b=>b.status==='cashout').length;
   h+=`<div class="card"><h3>Green × Red <small>${st.res.length} resolvidas</small></h3>${donut([{l:'Greens',v:st.g,c:'#22c55e'},{l:'Reds',v:st.r,c:'#ef4444'},{l:'Anuladas',v:vo,c:'#64748b'}],pct(st.taxa))}${co?'<div class="hint">Cashouts contam como green ou red conforme o lucro.</div>':''}</div>`;
-  // por casa, esporte, mercado
   h+=`<div class="card"><h3>Lucro por casa</h3>${hbars(agrupa(st.res,b=>casaById(b.casaId).nome))}</div>`;
   h+=`<div class="card"><h3>Lucro por esporte</h3>${hbars(agrupa(st.res,b=>b.esporte||'Outro'))}</div>`;
   h+=`<div class="card"><h3>Lucro por mercado</h3>${hbars(agrupa(st.res,b=>b.mercado||'Outro'))}</div>`;
-  // faixas de odd
   const fx=b=>{const o=+b.odd;return o<1.5?'1.01–1.49':o<2?'1.50–1.99':o<3?'2.00–2.99':'3.00+'};
   const fa=agrupa(st.res,fx).sort((a,b)=>a.l<b.l?-1:1);
   h+=`<div class="card"><h3>Desempenho por faixa de odd</h3>${fa.length?`<table class="tbl"><tr><th>Odd</th><th>Apostas</th><th>Acerto</th><th>ROI</th><th>Lucro</th></tr>${fa.map(f=>`<tr><td>${f.l}</td><td>${f.n}</td><td>${pct((f.g+f.r)?f.g/(f.g+f.r)*100:0)}</td><td class="${cls(f.v)}">${pct(f.st?f.v/f.st*100:0)}</td><td class="${cls(f.v)}">${fmtS(f.v)}</td></tr>`).join('')}</table>`:'<div class="empty">Sem dados no período</div>'}</div>`;
-  // dia da semana
   const DS=['Dom','Seg','Ter','Qua','Qui','Sex','Sáb'];const ds=DS.map(l=>({l,v:0}));st.res.forEach(b=>{const[y,m,d]=b.data.split('-').map(Number);ds[new Date(y,m-1,d).getDay()].v+=lucro(b)});
   h+=`<div class="card"><h3>Lucro por dia da semana</h3>${st.res.length?hbars(ds):'<div class="empty">Sem dados no período</div>'}</div>`;
   return h}
 
 /* ============ AJUSTES ============ */
+function cardConta(){
+  if(!Cloud.configurado())return`<div class="card"><h3>Conta Google</h3><div class="hint" style="margin:0">Login ainda não configurado. Preencha o <b>config.js</b> com os dados do Firebase (passo a passo no LEIA-ME).</div></div>`;
+  if(USER){const ini=esc((USER.displayName||USER.email||'?').charAt(0).toUpperCase());
+    return`<div class="card"><h3>Conta Google</h3><div style="display:flex;gap:12px;align-items:center"><div class="av">${USER.photoURL?`<img src="${esc(USER.photoURL)}" referrerpolicy="no-referrer" alt="">`:ini}</div><div class="bl"><div class="ev">${esc(USER.displayName||'Conta Google')}</div><div class="meta">${esc(USER.email||'')}</div><div class="cst">${CST_TXT[CST]||''}</div></div></div>
+    <div class="btns"><button class="btn o" onclick="Cloud.push(true);toast('Sincronizando…')">⟳ Sincronizar agora</button><button class="btn o" onclick="sair()">Sair</button></div>
+    <div class="hint">Seus dados ficam salvos na sua conta e aparecem em qualquer aparelho em que você entrar.</div></div>`}
+  return`<div class="card"><h3>Conta Google</h3><div class="hint" style="margin:0 0 4px">Entre para ter backup automático e usar no celular e no computador. Os dados deste aparelho vão junto.</div>
+   <div class="btns"><button class="btn gg" onclick="entrarGoogle()">${$('#boas .btn.gg svg').outerHTML}Entrar com Google</button></div></div>`}
 function vMais(){
-  return`<div class="card"><h3>Perfil</h3><label>Seu nome (aparece na saudação)<input value="${esc(S.nome)}" placeholder="Ex: Alex" onchange="S.nome=this.value.trim();save();toast('Nome salvo')"></label>
-  <div class="set"><div>Tema claro</div><button class="sw ${S.tema==='light'?'on':''}" onclick="S.tema=S.tema==='light'?'dark':'light';save();render()"></button></div></div>
+  return cardConta()+`<div class="card"><h3>Perfil</h3><label>Seu nome (aparece na saudação)<input value="${esc(S.nome)}" placeholder="Ex: Alex" onchange="S.nome=this.value.trim();save();toast('Nome salvo')"></label>
+  <div class="set"><div>Tema claro</div><button class="sw ${S.tema==='light'?'on':''}" onclick="S.tema=S.tema==='light'?'dark':'light';saveUI();render()"></button></div></div>
   <div class="card"><h3>Gestão de banca</h3>
    <div class="set"><div>Unidade (% da banca)<div class="hint">Stake sugerida: ${fmt(unidade())}</div></div><input type="number" inputmode="decimal" step="0.5" value="${S.unidadePct}" onchange="S.unidadePct=num(this.value)||1;save();render()"></div>
    <div class="set"><div>Meta de lucro mensal (R$)<div class="hint">0 = desativada</div></div><input type="number" inputmode="decimal" value="${S.meta||''}" placeholder="0" onchange="S.meta=num(this.value);save()"></div>
@@ -368,20 +425,20 @@ function vMais(){
   <div class="card"><h3>Listas</h3>
    <label>Esportes (separe por vírgula)<textarea rows="2" onchange="S.esportes=lista(this.value);save();toast('Esportes salvos')">${esc(S.esportes.join(', '))}</textarea></label>
    <label>Mercados (separe por vírgula)<textarea rows="3" onchange="S.mercados=lista(this.value);save();toast('Mercados salvos')">${esc(S.mercados.join(', '))}</textarea></label></div>
-  <div class="card"><h3>Segurança</h3><div class="set"><div>PIN de acesso<div class="hint">${S.pin?'Ativo':'Desativado'}</div></div><button class="btn o" style="width:auto;padding:9px 14px" onclick="pinForm()">${S.pin?'Alterar / remover':'Criar PIN'}</button></div></div>
+  <div class="card"><h3>Segurança</h3><div class="set"><div>PIN de acesso<div class="hint">${S.pin?'Ativo neste aparelho':'Desativado'}</div></div><button class="btn o" style="width:auto;padding:9px 14px" onclick="pinForm()">${S.pin?'Alterar / remover':'Criar PIN'}</button></div></div>
   <div class="card"><h3>Dados</h3>
    <div class="btns"><button class="btn o" onclick="exportar()">⬇ Backup</button><button class="btn o" onclick="$('#imp').click()">⬆ Restaurar</button></div>
    <input type="file" id="imp" accept=".json,application/json" class="hidden" onchange="importar(this)">
    <div class="btns"><button class="btn y" onclick="simular()">🎲 Gerar dados de simulação</button></div>
    <div class="btns"><button class="btn r" onclick="zerar()">Apagar todos os dados</button></div>
-   <div class="hint">Os dados ficam salvos só neste aparelho. Faça backup de vez em quando.</div></div>
-  <div class="foot">Bancô v1.0 · Ferramenta de controle pessoal. Não é casa de apostas e não movimenta dinheiro.<br>Aposta não é investimento. Jogue com responsabilidade · +18</div>`}
+   <div class="hint">${USER?'Logado: as mudanças, inclusive apagar e simular, valem também na nuvem.':'Sem conta, os dados ficam só neste aparelho. Faça backup de vez em quando.'}</div></div>
+  <div class="foot">Bancô v1.1 · Ferramenta de controle pessoal. Não é casa de apostas e não movimenta dinheiro.<br>Aposta não é investimento. Jogue com responsabilidade · +18</div>`}
 const lista=v=>{const a=v.split(',').map(s=>s.trim()).filter(Boolean);return a.length?a:['Outro']};
 
 /* ============ Sheets ============ */
-function sheet(html){$('#ovl').innerHTML=`<div class="ov" onclick="if(event.target===this)fecha()"><div class="sheet"><div class="grab"></div>${html}</div></div>`}
+function sheet(html,travado){$('#ovl').innerHTML=`<div class="ov" ${travado?'':'onclick="if(event.target===this)fecha()"'}><div class="sheet"><div class="grab"></div>${html}</div></div>`}
 function fecha(){$('#ovl').innerHTML=''}
-function toast(t){const d=document.createElement('div');d.className='toast';d.textContent=t;document.body.appendChild(d);setTimeout(()=>d.remove(),1900)}
+function toast(t){const d=document.createElement('div');d.className='toast';d.textContent=t;document.body.appendChild(d);setTimeout(()=>d.remove(),2600)}
 const opts=(arr,sel)=>arr.map(x=>`<option ${x===sel?'selected':''}>${esc(x)}</option>`).join('');
 const optsCasa=sel=>S.casas.map(c=>`<option value="${c.id}" ${c.id===sel?'selected':''}>${esc(c.nome)} — ${fmt(saldoCasa(c.id))}</option>`).join('');
 
@@ -408,7 +465,7 @@ function betForm(id){
   ${id?`<div class="btns"><button class="btn o" onclick="dupBet('${id}')">Duplicar</button><button class="btn r" onclick="delBet('${id}')">Excluir</button></div>`:''}`);
   calcPot();if(!id)setTimeout(()=>$('#f_ev')&&$('#f_ev').focus(),250)}
 function setSeg(k){fStatus=k;document.querySelectorAll('#f_seg button').forEach(b=>b.classList.toggle('on',b.dataset.k===k));$('#f_retw').classList.toggle('hidden',k!=='cashout');calcPot()}
-function calcPot(){const o=num($('#f_odd').value),s=num($('#f_st').value),el=$('#f_pot');if(!el)return;
+function calcPot(){const el=$('#f_pot');if(!el)return;const o=num($('#f_odd').value),s=num($('#f_st').value);
   if(!(o>1&&s>0)){el.innerHTML='<span class="mut">Informe odd e stake</span><span></span>';return}
   const b={odd:o,stake:s,status:fStatus,retorno:num(($('#f_ret')||{}).value||0)};
   if(fStatus==='pendente'||fStatus==='green')el.innerHTML=`<span>Retorno <b>${fmt(s*o)}</b></span><span class="pos">Lucro ${fmtS(s*(o-1))}</span>`;
@@ -460,23 +517,23 @@ function saveCasa(id){const n=$('#c_n').value.trim();if(!n){toast('Dê um nome p
 function delCasa(id){if(S.bets.some(b=>b.casaId===id)||S.movs.some(m=>m.casaId===id)){alert('Essa casa tem apostas ou movimentações. Exclua ou mova esses registros antes.');return}
   if(!confirm('Excluir esta casa?'))return;S.casas=S.casas.filter(c=>c.id!==id);save();fecha();render()}
 
-/* ============ PIN ============ */
-function pinForm(){sheet(`<h3>PIN de acesso</h3><label>Novo PIN (4 números)<input id="p1" type="password" inputmode="numeric" maxlength="4" pattern="[0-9]*"></label><label>Repita o PIN<input id="p2" type="password" inputmode="numeric" maxlength="4"></label>
- <div class="btns"><button class="btn g" onclick="savePin()">Salvar PIN</button></div>${S.pin?'<div class="btns"><button class="btn o" onclick="S.pin=\'\';save();fecha();render();toast(\'PIN removido\')">Remover PIN</button></div>':''}`)}
-function savePin(){const a=$('#p1').value,b=$('#p2').value;if(!/^\d{4}$/.test(a)){toast('Use 4 números');return}if(a!==b){toast('Os PINs não conferem');return}S.pin=a;save();fecha();render();toast('PIN ativado 🔒')}
+/* ============ PIN (só neste aparelho) ============ */
+function pinForm(){sheet(`<h3>PIN de acesso</h3><div class="hint" style="margin:0">O PIN vale só para este aparelho.</div><label>Novo PIN (4 números)<input id="p1" type="password" inputmode="numeric" maxlength="4" pattern="[0-9]*"></label><label>Repita o PIN<input id="p2" type="password" inputmode="numeric" maxlength="4"></label>
+ <div class="btns"><button class="btn g" onclick="savePin()">Salvar PIN</button></div>${S.pin?'<div class="btns"><button class="btn o" onclick="S.pin=\'\';saveUI();fecha();render();toast(\'PIN removido\')">Remover PIN</button></div>':''}`)}
+function savePin(){const a=$('#p1').value,b=$('#p2').value;if(!/^\d{4}$/.test(a)){toast('Use 4 números');return}if(a!==b){toast('Os PINs não conferem');return}S.pin=a;saveUI();fecha();render();toast('PIN ativado 🔒')}
 let pinBuf='';
 function showLock(){$('#lock').classList.remove('hidden');$('#kp').innerHTML=[1,2,3,4,5,6,7,8,9,'',0,'⌫'].map(k=>k===''?'<span></span>':`<button onclick="pk('${k}')">${k}</button>`).join('');pinBuf='';dots()}
 function dots(){$('#pdots').innerHTML=[0,1,2,3].map(i=>`<i class="${i<pinBuf.length?'f':''}"></i>`).join('')}
 function pk(k){if(k==='⌫')pinBuf=pinBuf.slice(0,-1);else if(pinBuf.length<4)pinBuf+=k;dots();
-  if(pinBuf.length===4){if(pinBuf===S.pin){unlocked=true;$('#lock').classList.add('hidden');acaoUrl()}else{if(navigator.vibrate)navigator.vibrate(150);setTimeout(()=>{pinBuf='';dots()},250);toast('PIN incorreto')}}}
+  if(pinBuf.length===4){if(pinBuf===S.pin){$('#lock').classList.add('hidden');acaoUrl()}else{if(navigator.vibrate)navigator.vibrate(150);setTimeout(()=>{pinBuf='';dots()},250);toast('PIN incorreto')}}}
 
 /* ============ Dados ============ */
-function exportar(){const blob=new Blob([JSON.stringify(S,null,1)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='banco-backup-'+hoje()+'.json';a.click();toast('Backup baixado')}
-function importar(inp){const f=inp.files[0];if(!f)return;const rd=new FileReader();rd.onload=()=>{try{const d=JSON.parse(rd.result);if(!Array.isArray(d.bets)||!Array.isArray(d.casas))throw 0;if(!confirm('Substituir os dados atuais pelo backup?'))return;S=Object.assign(def(),d);save();render();toast('Backup restaurado ✅')}catch(e){alert('Arquivo de backup inválido.')}};rd.readAsText(f);inp.value=''}
-function zerar(){if(!confirm('Apagar TODOS os dados? Isso não pode ser desfeito.'))return;if(!confirm('Tem certeza mesmo? Faça um backup antes.'))return;const k={nome:S.nome,tema:S.tema};S=Object.assign(def(),k);save();render();toast('Dados apagados')}
+function exportar(){const blob=new Blob([JSON.stringify(dadosSync(),null,1)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='banco-backup-'+hoje()+'.json';a.click();toast('Backup baixado')}
+function importar(inp){const f=inp.files[0];if(!f)return;const rd=new FileReader();rd.onload=()=>{try{const d=JSON.parse(rd.result);if(!Array.isArray(d.bets)||!Array.isArray(d.casas))throw 0;if(!confirm('Substituir os dados atuais pelo backup?'))return;const keep={};SO_APARELHO.forEach(k=>{if(k in S)keep[k]=S[k]});S=Object.assign(def(),d,keep);save();render();toast('Backup restaurado ✅')}catch(e){alert('Arquivo de backup inválido.')}};rd.readAsText(f);inp.value=''}
+function zerar(){if(!confirm('Apagar TODOS os dados?'+(USER?' Isso apaga também na nuvem.':'')+' Não pode ser desfeito.'))return;if(!confirm('Tem certeza mesmo? Faça um backup antes.'))return;const keep={};SO_APARELHO.forEach(k=>{if(k in S)keep[k]=S[k]});S=Object.assign(def(),keep);save();render();toast('Dados apagados')}
 function simular(){
-  if((S.bets.length||S.movs.length)&&!confirm('Isso vai SUBSTITUIR seus dados atuais por dados de simulação. Continuar?'))return;
-  const k={nome:S.nome,tema:S.tema,pin:S.pin};S=Object.assign(def(),k,{unidadePct:2,meta:300,stopLoss:100,limDep:1500});
+  if((S.bets.length||S.movs.length)&&!confirm('Isso vai SUBSTITUIR seus dados atuais'+(USER?' (também na nuvem)':'')+' por dados de simulação. Continuar?'))return;
+  const keep={};SO_APARELHO.forEach(k=>{if(k in S)keep[k]=S[k]});S=Object.assign(def(),keep,{nome:S.nome,unidadePct:2,meta:300,stopLoss:100,limDep:1500});
   S.casas=[{id:'c1',nome:'Casa A',cor:'#22c55e'},{id:'c2',nome:'Casa B',cor:'#3b82f6'},{id:'c3',nome:'Casa C',cor:'#f59e0b'}];
   const ds=n=>{const d=new Date();d.setDate(d.getDate()-n);return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')};
   const T=['Flamengo x Palmeiras','Corinthians x São Paulo','Real Madrid x Barcelona','Lakers x Celtics','Grêmio x Inter','Man City x Arsenal','Djokovic x Alcaraz','Santos x Vasco','PSG x Bayern','Botafogo x Fluminense','Cruzeiro x Atlético-MG','Liverpool x Chelsea','Bahia x Fortaleza','Nuggets x Warriors','Juventus x Milan'];

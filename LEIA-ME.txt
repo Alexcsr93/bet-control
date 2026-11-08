@@ -1,19 +1,87 @@
-BANCÔ v1.0 — Gestão de Banca (PWA)
+BANCÔ v1.1 — Gestão de Banca com login Google
+=============================================
 
-Arquivos (envie TODOS soltos na raiz do repositório, sem pasta):
-  index.html, manifest.json, sw.js, icon-192.png, icon-512.png, icon-maskable-512.png
+ARQUIVOS (envie TODOS soltos na raiz do repositório, sem pasta):
+  index.html, config.js, cloud.js, manifest.json, sw.js,
+  icon-192.png, icon-512.png, icon-maskable-512.png
 
-Publicar (mesmo caminho do Fatiô):
- 1. GitHub > New repository > nome: banco > Public > Create
- 2. "uploading an existing file" > arraste os 6 arquivos > Commit changes
- 3. Settings > Pages > Deploy from a branch > main / (root) > Save
- 4. Link: https://alexcsr93.github.io/banco/
- 5. Celular (Chrome) > ⋮ > Instalar app
+Sem preencher o config.js o app funciona normal, só sem login.
 
-APK (PWABuilder > Package For Stores > Android):
- - Package ID: io.github.alexcsr93.banco   (NUNCA o mesmo do Fatiô)
- - Signing key: New  |  Fallback: Custom Tabs
- - Adicione o bloco novo no assetlinks.json do repo alexcsr93.github.io (sem apagar os outros)
+---------------------------------------------
+PARTE 1 — FIREBASE (uns 10 minutos, no computador)
+---------------------------------------------
+Use um projeto NOVO só para o Bancô (não misture com Fatiô/Meta Entregador).
 
-Atualizar depois: troque 'banco-v1' por 'banco-v2' no sw.js e suba os arquivos de novo.
-Dados ficam só no aparelho: use Ajustes > Backup de vez em quando.
+1. console.firebase.google.com > Adicionar projeto > nome: banco-app
+   (Google Analytics pode desativar) > Criar.
+
+2. AUTHENTICATION
+   Criação > Authentication > Vamos começar > Método de login > Google
+   > Ativar > escolha seu e-mail de suporte > Salvar.
+
+3. DOMÍNIO AUTORIZADO
+   Authentication > Configurações > Domínios autorizados > Adicionar domínio:
+       alexcsr93.github.io
+   (sem https:// e sem /banco)
+
+4. FIRESTORE
+   Criação > Firestore Database > Criar banco de dados
+   > Local: southamerica-east1 (São Paulo) > Modo de produção > Criar.
+   Aba REGRAS > apague tudo e cole:
+
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /banco/{uid} {
+      allow read, write: if request.auth != null && request.auth.uid == uid;
+    }
+  }
+}
+
+   > clique em PUBLICAR. (Se não publicar, dá erro "Sem permissão".)
+
+5. APP WEB + config.js
+   Engrenagem (Configurações do projeto) > Seus apps > ícone </> (Web)
+   > apelido: Bancô > Registrar (NÃO marque Hosting).
+   Na tela do código, selecione a opção "Config" (não NPM) e copie o bloco.
+   Abra o config.js no Bloco de Notas e troque os COLE_AQUI pelos valores.
+   Mantenha "window.FIREBASE_CONFIG =" no começo. Salve.
+
+---------------------------------------------
+PARTE 2 — GITHUB
+---------------------------------------------
+1. Repositório "banco" (Public) > Add file > Upload files
+   > envie os 8 arquivos > Commit changes.
+   (Se o repositório já existe, envie por cima: substitui os antigos.)
+2. Settings > Pages > Deploy from a branch > main / (root) > Save.
+3. Confira: https://alexcsr93.github.io/banco/config.js
+   tem que mostrar SUA apiKey, não COLE_AQUI.
+
+---------------------------------------------
+PARTE 3 — TESTAR
+---------------------------------------------
+1. Computador: abra https://alexcsr93.github.io/banco/ e aperte Ctrl+Shift+R.
+   Aparece a tela "Entrar com Google".
+2. Entre, lance um depósito e veja "☁️ Sincronizado" embaixo da saudação.
+3. Celular: feche e abra o app 2 vezes (para pegar a versão nova),
+   entre com a MESMA conta e confira se o depósito apareceu.
+
+Se já tinha dados no aparelho e na conta, o app pergunta qual versão usar.
+
+ERROS COMUNS
+  "Domínio não autorizado"     > Parte 1, passo 3
+  "Login Google não ativado"   > Parte 1, passo 2
+  "Sem permissão no banco"     > Parte 1, passo 4 (PUBLICAR as regras)
+  "apiKey inválida"            > Parte 1, passo 5 (copie pela opção Config)
+  Tela de login não aparece    > config.js ainda com COLE_AQUI ou cache: Ctrl+Shift+R
+
+---------------------------------------------
+APK (PWABuilder)
+---------------------------------------------
+- Package For Stores > Android > Package ID: io.github.alexcsr93.banco
+- Signing key: New  |  Fallback: Custom Tabs (NUNCA WebView, o Google bloqueia o login)
+- Adicione o bloco novo no assetlinks.json do repo alexcsr93.github.io,
+  com vírgula, SEM apagar os blocos do Fatiô e do Meta Entregador.
+
+ATUALIZAR DEPOIS: troque 'banco-v2' por 'banco-v3' no sw.js e suba de novo.
+Nunca suba um config.js em branco por cima do seu config.js preenchido.
